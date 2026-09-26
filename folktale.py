@@ -3,7 +3,7 @@ import math
 import time
 
 
-def type_print(text1, delay=0.01):
+def type_print(text1, delay=0):
     for char in text1:
      print(char, end='', flush=True)
      time.sleep(delay)
@@ -11,7 +11,7 @@ print()
 
 text1=(
     """
-Villager: Hello Adventurer How do you do? Welcome to Avegard, A World filled with Monsters, Dragon, Magic and More 
+???     : Hello Adventurer How do you do? Welcome to Avegard, A World filled with Monsters, Dragon, Magic and More 
           Firstly, Would you mind Telling me your name?
     """
 )
@@ -58,8 +58,7 @@ Angel:    Well 1) I dont want to its too troublesome for me to go down and beat 
                3) I'm too busy farming materials and husbandos in my gacha game so bug off 
                So do you accept or not ?
 Narrator: You realising the angel is not an angle but just a shut-in gacha addict thinks about her offer
-"""
-)
+""")
 
 offer = str(input("Do you accept the angels offer? (y/n):"))
 
@@ -73,15 +72,15 @@ Narrator:  Suddenly you wake up in the same place in the same situation like not
            and armour and so you decided to battle the goblin horde ( even tho your till sccared af)
 
            BATTLE BEGINS 
-"""
-              )
-attack = str(input("""Choose what move to use(choose the number): 
+""")
+   attack = str(input("""Choose what move to use: 
 1)Sticker swinger special   2)Excalibuhhhhhh
 3)Basic attack 1            4)Touch them with your sword 
-"""))
 
-if attack == ["1" , "2", "3", "4"]:
-   type_print("""
+(choose the number):"""))
+
+   if attack in {"1" , "2", "3", "4"}:
+      type_print("""
 Narrator: Becuase of your OP sword the moment the sword comes near the goblins they just disintergrate, and the goblin warlord
           has already staterd running away
           First time in your life you actually feel like you are useful, the villager thanks you and everyone was saved, though
@@ -91,5 +90,25 @@ Narrator: And so after the events happpened at the village ypu truly set out on 
           You travel to many countries and gather companions to travel together with, since the OP armour cannot change a person
           you were irresponsible enough to get a girl pregnant without meaning to, but from your travels you have dtarted to change 
           and actually cared for your now wife (good job on not trying to go buy milk), eventually you reached the Northern Dragon Kings
-          lair to defeat him 
+          lair to defeat him. You reach his lair and see a a big dragon with scales as thick as ERA armour of a soviet tank, but regardless
+          you and your trusty sword and stick swinger abilities defeat him
+          You are crowned a hero and you live happily ever after ( mostly because im lazy to write a dramatic ending, wondring where Bob went)
+
+
+                                                                 THE END   
 """)
+
+
+elif offer == "n":
+   type_print(
+"""
+Angel:    Oh, you wont acccept my offer you mere mortal, you should've really known you place, Too bad
+Narrator: Too bad kid, you very unfortunately made the wrong choice it seems, you suddenly wake up where you were earlier, surrounded by goblins
+          if anything, you know you've messed up big time and should've taken the angels offer
+          the goblins pounce on you one by one hitting the shi out of you with their sticks annd getting thrown around, to finish the job the warlord
+          comes and tears you limb to limb making you have a very painful death indeed
+
+                                                                    YOU DIED.
+                                                                     THE END
+"""
+   )
