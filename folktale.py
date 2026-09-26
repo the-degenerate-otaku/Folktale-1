@@ -3,7 +3,7 @@ import math
 import time
 
 
-def type_print(text1, delay=0):
+def type_print(text1, delay=0.05):
     for char in text1:
      print(char, end='', flush=True)
      time.sleep(delay)
